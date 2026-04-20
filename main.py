@@ -10,12 +10,6 @@ for rol in roles_generados:
 # def generar_simulacion(numeroRoles):
 #     return simular_roles(numeroRoles)
 
-
-
-
-
-
-
 # from notebook.limpieza import limpiar_datos
 
 # #Llamando a las rutinas de simulacion
