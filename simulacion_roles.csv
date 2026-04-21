@@ -1,11 +1,11 @@
 nombre_rol,codigo
 ,03
-root,01X
 SoloLectura,
+root,
+,02
+,03
 root,01X
 SoloLectura,03X
-SoloLectura,03X
-SoloLectura,03
-root,01X
-Administrador,02X
-sololectura,03
+,01
+root,01
+root,01
