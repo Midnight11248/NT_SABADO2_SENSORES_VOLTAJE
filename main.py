@@ -1,23 +1,19 @@
 import pandas as pd
 
-from utils.hu3_simulacion_roles import simular_roles
+from utils.hu2_simulacion_roles import simular_roles
+from notebook.hu1_limpieza_roles import limpiar_datos
 
-roles_generados = simular_roles(10)
+def generar_simulacion_roles(numeroRoles):
+    return simular_roles(numeroRoles)
 
-for rol in roles_generados:
-    print(rol)
+# LLamando a la función para generar la simulación de roles
+simular_roles = generar_simulacion_roles(10)
 
-# def generar_simulacion(numeroRoles):
-#     return simular_roles(numeroRoles)
+# Llamando a pandas para crear dataframe de los datos de entrada
+simulaciones_roles_ordenadas = pd.DataFrame(simular_roles)
 
-# from notebook.limpieza import limpiar_datos
+# Llamando a la función de limpieza de datos
+simulacion_roles_limpios = limpiar_datos(simulaciones_roles_ordenadas)
 
-# #Llamando a las rutinas de simulacion
-# simulaciones=generar_simulacion(10)
-
-# #Llamando a pandas para crear data frames de los datos de entrada
-# simulaciones_ordenadas=pd.DataFrame(simulaciones)
-
-# #LLamando a la rutina de limpieza
-# simulaciones_limpias=limpiar_datos(simulaciones_ordenadas)
-# print(simulaciones_limpias)
+print("\nSimulación de Roles Limpios:")
+print(simulacion_roles_limpios) 
