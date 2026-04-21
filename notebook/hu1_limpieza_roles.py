@@ -13,7 +13,8 @@ def limpiar_datos(data_frame_sucio):
     data_frame_limpio["nombre_rol"] = data_frame_limpio["nombre_rol"].where(data_frame_limpio["nombre_rol"].isin(valores_validos_nombre_rol), other=pd.NA)
 
     #2. Limpiar las columnas numéricas del DF
-    data_frame_limpio["codigo"] = pd.to_numeric(data_frame_limpio["codigo"])
+    data_frame_limpio["codigo"] = pd.to_numeric(data_frame_limpio["codigo"], errors="coerce")
+    data_frame_limpio=data_frame_limpio.dropna(subset=["codigo"])
 
     #2.1 Limpiando campos numericos que no tengan valores validos
     data_frame_limpio = data_frame_limpio[data_frame_limpio["codigo"].isin([1, 2, 3])]

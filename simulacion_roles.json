@@ -1,10 +1,42 @@
-{"nombre_rol":"root","codigo":"01"}
-{"nombre_rol":"sololectura","codigo":"03"}
-{"nombre_rol":"root","codigo":"01X"}
-{"nombre_rol":"root","codigo":"01X"}
-{"nombre_rol":"administrador","codigo":"02"}
-{"nombre_rol":"root","codigo":"01X"}
-{"nombre_rol":"administrador","codigo":"02"}
-{"nombre_rol":"root","codigo":"01"}
-{"nombre_rol":"root","codigo":"01X"}
-{"nombre_rol":"root","codigo":"01"}
+[
+    {
+        "nombre_rol":null,
+        "codigo":"03"
+    },
+    {
+        "nombre_rol":"root",
+        "codigo":"01X"
+    },
+    {
+        "nombre_rol":"SoloLectura",
+        "codigo":null
+    },
+    {
+        "nombre_rol":"root",
+        "codigo":"01X"
+    },
+    {
+        "nombre_rol":"SoloLectura",
+        "codigo":"03X"
+    },
+    {
+        "nombre_rol":"SoloLectura",
+        "codigo":"03X"
+    },
+    {
+        "nombre_rol":"SoloLectura",
+        "codigo":"03"
+    },
+    {
+        "nombre_rol":"root",
+        "codigo":"01X"
+    },
+    {
+        "nombre_rol":"Administrador",
+        "codigo":"02X"
+    },
+    {
+        "nombre_rol":"sololectura",
+        "codigo":"03"
+    }
+]

@@ -46,7 +46,7 @@ def simular_roles(numeroRoles):
     df_roles.to_csv("simulacion_roles.csv", index=False)
     print("\nSimulación de Roles guardada en 'simulacion_roles.csv'")
 
-    df_roles.to_json("simulacion_roles.json", orient="records", lines=True)
+    df_roles.to_json("simulacion_roles.json", orient="records", indent=4)
     print("\nSimulación de Roles guardada en 'simulacion_roles.json'")  
 
     return roles
