@@ -1,8 +1,17 @@
 import pandas as pd
 
+##### IMPORTANDO FUNCIONES DE LA TABLA ROLES ######
+
 from utils.hu2_simulacion_roles import simular_roles
 from notebook.hu1_limpieza_roles import limpiar_datos
 from notebook.hu3_descripcion_exploratoria import *
+from notebook.hu5_agrupacion_resumen import *
+
+
+#####  IMPORTANDO FUNCIONES DE LA TABLA USER_SENSORS ######
+
+
+##### EJECUTANDO FUNCIONES DE LA TABLA ROLES ######
 
 def generar_simulacion_roles(numeroRoles):
     return simular_roles(numeroRoles)
@@ -22,7 +31,16 @@ print("="*50)
 print("\nPrimeras 5 filas de los Roles Limpios:")
 print(simulacion_roles_limpios.head())
 
+# Llamando a la función de agrupación y resumen
+print("\nAgrupación y Resumen de los Roles Limpios:")
+print("="*50)
+resumen_roles_limpios = simulacion_roles_limpios.groupby("nombre_rol").agg({
+    "codigo": ["count", "mean", "min", "max"]
+})
+print(resumen_roles_limpios)
+
 print("\nSimulación de Roles Limpios:")
 print(simulacion_roles_limpios)
 
+##### EJECUTANDO FUNCIONES DE LA TABLA USER_SENSORS ######
 
