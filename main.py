@@ -1,28 +1,17 @@
 import pandas as pd
 
-from utils.hu2_simulacion_roles import simular_roles
-from notebook.hu1_limpieza_roles import limpiar_datos
-from notebook.hu3_descripcion_exploratoria import *
+from utils.simulacion_mediciones import generar_simulacion
+from notebook.hu1_limpieza_mediciones import limpiar_datos
+from notebook.hu2_descripcion_mediciones import describir_datos
+from notebook.hu3_simulacion_exportacion_mediciones import exportar_datos
+from notebook.hu4_query_mediciones import consultar_datos
+from notebook.hu5_agrupacion_mediciones import agrupar_datos
 
-def generar_simulacion_roles(numeroRoles):
-    return simular_roles(numeroRoles)
+simulaciones = generar_simulacion(100)
+simulaciones_ordenadas = pd.DataFrame(simulaciones)
 
-# LLamando a la función para generar la simulación de roles
-simular_roles = generar_simulacion_roles(10)
-
-# Llamando a pandas para crear dataframe de los datos de entrada
-simulaciones_roles_ordenadas = pd.DataFrame(simular_roles)
-
-# Llamando a la función de limpieza de datos
-simulacion_roles_limpios = limpiar_datos(simulaciones_roles_ordenadas)
-
-# Llamando a la función de descripción exploratoria
-print("\nDescripción Exploratoria de los Roles Limpios:")
-print("="*50)
-print("\nPrimeras 5 filas de los Roles Limpios:")
-print(simulacion_roles_limpios.head())
-
-print("\nSimulación de Roles Limpios:")
-print(simulacion_roles_limpios)
-
-
+simulaciones_limpias = limpiar_datos(simulaciones_ordenadas)
+describir_datos(simulaciones_limpias)
+exportar_datos()
+consultar_datos(simulaciones_limpias)
+agrupar_datos(simulaciones_limpias)
