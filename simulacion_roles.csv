@@ -1,0 +1,11 @@
+nombre_rol,codigo
+SoloLectura,
+root,01X
+Administrador,02X
+root,01
+SoloLectura,03X
+SoloLectura,
+root,01
+SoloLectura,03X
+root,
+root,01X

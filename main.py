@@ -13,6 +13,8 @@ from notebook.hu3_simulacion_exportacion_mediciones import exportar_datos
 from notebook.hu4_query_mediciones import consultar_datos
 from notebook.hu5_agrupacion_mediciones import agrupar_datos
 
+
+
 # Simulación de la tabla de roles
 simulacion_roles = simular_roles(10)
 df_roles = pd.DataFrame(simulacion_roles)
@@ -21,7 +23,7 @@ df_roles_limpio = limpiar_datos_roles(df_roles)
 describir_datos(df_roles_limpio)
 
 # Simulación de la tabla de mediciones
-simulaciones = generar_simulacion(100)
+simulaciones = generar_simulacion(10)
 df_mediciones = pd.DataFrame(simulaciones)
 
 df_mediciones_limpio = limpiar_datos(df_mediciones)
