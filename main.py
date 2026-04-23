@@ -1,28 +1,32 @@
 import pandas as pd
 
+# Importar funciones de cada HU roles
 from utils.hu2_simulacion_roles import simular_roles
-from notebook.hu1_limpieza_roles import limpiar_datos
+from notebook.hu1_limpieza_roles import limpiar_datos_roles
 from notebook.hu3_descripcion_exploratoria import *
 
-def generar_simulacion_roles(numeroRoles):
-    return simular_roles(numeroRoles)
+# Importar funciones de cada HU mediciones
+from utils.simulacion_mediciones import generar_simulacion
+from notebook.hu1_limpieza_mediciones import limpiar_datos
+from notebook.hu2_descripcion_mediciones import describir_datos
+from notebook.hu3_simulacion_exportacion_mediciones import exportar_datos
+from notebook.hu4_query_mediciones import consultar_datos
+from notebook.hu5_agrupacion_mediciones import agrupar_datos
 
-# LLamando a la función para generar la simulación de roles
-simular_roles = generar_simulacion_roles(10)
+# Simulación de la tabla de roles
+simulacion_roles = simular_roles(10)
+df_roles = pd.DataFrame(simulacion_roles)
 
-# Llamando a pandas para crear dataframe de los datos de entrada
-simulaciones_roles_ordenadas = pd.DataFrame(simular_roles)
+df_roles_limpio = limpiar_datos_roles(df_roles)
+describir_datos(df_roles_limpio)
 
-# Llamando a la función de limpieza de datos
-simulacion_roles_limpios = limpiar_datos(simulaciones_roles_ordenadas)
+# Simulación de la tabla de mediciones
+simulaciones = generar_simulacion(100)
+df_mediciones = pd.DataFrame(simulaciones)
 
-# Llamando a la función de descripción exploratoria
-print("\nDescripción Exploratoria de los Roles Limpios:")
-print("="*50)
-print("\nPrimeras 5 filas de los Roles Limpios:")
-print(simulacion_roles_limpios.head())
+df_mediciones_limpio = limpiar_datos(df_mediciones)
 
-print("\nSimulación de Roles Limpios:")
-print(simulacion_roles_limpios)
-
-
+describir_datos(df_mediciones_limpio)
+exportar_datos()
+consultar_datos(df_mediciones_limpio)
+agrupar_datos(df_mediciones_limpio)
