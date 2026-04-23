@@ -1,6 +1,6 @@
 import pandas as pd
 
-def limpiar_datos(data_frame_sucio):
+def limpiar_datos_roles(data_frame_sucio):
     data_frame_limpio = data_frame_sucio.copy()
 
     #1. Limpiar las columnas String del DF

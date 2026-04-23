@@ -8,7 +8,7 @@ def exportar_datos():
     data_frame = pd.DataFrame(simulaciones)
 
     data_frame.to_csv('simulacion_mediciones.csv', index=False)
-    data_frame.to_json('simulacion_mediciones.json', orient='records')
+    data_frame.to_json('simulacion_mediciones.json', orient='records',indent=4)
 
     print('Archivo CSV generado: simulacion_mediciones.csv')
     print('Archivo JSON generado: simulacion_mediciones.json')
