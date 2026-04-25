@@ -1,6 +1,7 @@
 import random
 
-def limpiar_datos_user(data_frame_sucio):
+def registrar_usuarios():
+    usuarios = []
 
     cantidad = int(input("¿Cuántos usuarios deseas registrar?: "))
 
