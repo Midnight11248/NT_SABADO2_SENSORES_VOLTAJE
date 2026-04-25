@@ -1,42 +1,52 @@
 [
     {
+        "id":1,
+        "nombre_rol":"root",
+        "codigo":"01"
+    },
+    {
+        "id":2,
         "nombre_rol":"SoloLectura",
         "codigo":"03X"
     },
     {
-        "nombre_rol":"root",
-        "codigo":"01X"
-    },
-    {
+        "id":3,
         "nombre_rol":"administrador",
         "codigo":"02"
     },
     {
-        "nombre_rol":"sololectura",
-        "codigo":"03"
+        "id":4,
+        "nombre_rol":"root",
+        "codigo":"01"
     },
     {
-        "nombre_rol":"SoloLectura",
-        "codigo":"03"
+        "id":5,
+        "nombre_rol":"root",
+        "codigo":"01"
     },
     {
-        "nombre_rol":"sololectura",
-        "codigo":"03"
-    },
-    {
-        "nombre_rol":"Administrador",
+        "id":6,
+        "nombre_rol":"root",
         "codigo":null
     },
     {
-        "nombre_rol":"root",
-        "codigo":"01X"
+        "id":7,
+        "nombre_rol":"administrador",
+        "codigo":"02"
     },
     {
+        "id":8,
         "nombre_rol":"root",
-        "codigo":"01X"
+        "codigo":"01"
     },
     {
-        "nombre_rol":"SoloLectura",
-        "codigo":"03"
+        "id":9,
+        "nombre_rol":"Administrador",
+        "codigo":"02X"
+    },
+    {
+        "id":10,
+        "nombre_rol":"Administrador",
+        "codigo":"02"
     }
 ]
