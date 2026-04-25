@@ -5,6 +5,15 @@ from utils.hu2_simulacion_roles import simular_roles
 from notebook.hu1_limpieza_roles import limpiar_datos_roles
 from notebook.hu3_descripcion_exploratoria import *
 
+#importar funciones de cada HU User sensors
+from notebook.HU1_Limpieza_u_sensors import generar_user_sensors_sucio
+from notebook.HU2_exploratoria_u_sensors import generar_user_sensors_limpio
+from utils.HU3_simulacion_u_sensors import generar_user_sensors
+from notebook.HU4_query_u_sensors import generar_user_sensors_limpio
+from notebook.HU5_agrupar_datos_u_sensors import generar_user_sensors_limpio
+
+
+
 # Importar funciones de cada HU mediciones
 from utils.simulacion_mediciones import generar_simulacion
 from notebook.hu1_limpieza_mediciones import limpiar_datos
