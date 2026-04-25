@@ -1,8 +1,9 @@
 import pandas as pd
-from utils.simulacion_usuarios import generar_simulacion
+
+from utils.hu1_simulacion_user import generar_usuarios
 
 def exportar_datos():
-    simulaciones = generar_simulacion(1000)
+    simulaciones = generar_usuarios(1000)
     data_frame = pd.DataFrame(simulaciones)
     data_frame.to_csv('simulacion_usuarios.csv', index=False)
     data_frame.to_json('simulacion_usuarios.json', orient='records', indent=4)
