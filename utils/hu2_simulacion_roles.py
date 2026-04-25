@@ -16,7 +16,7 @@ def simular_roles(numeroRoles):
         rol_seleccionado = random.choice(lista_roles)
 
         rol = {
-            "nombre_rol": i + 1,
+            "id": i + 1,
             "nombre_rol": rol_seleccionado["nombre_rol"],
             "codigo": rol_seleccionado["codigo"],
         }

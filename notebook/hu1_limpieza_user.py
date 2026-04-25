@@ -1,6 +1,6 @@
 import pandas as pd
 
-def limpiar_datos(data_frame_sucio):
+def limpiar_datos_user(data_frame_sucio):
 
     data_frame_limpio = data_frame_sucio.copy()
 
