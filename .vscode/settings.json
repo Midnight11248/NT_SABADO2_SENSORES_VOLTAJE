@@ -1,4 +1,8 @@
 {
+<<<<<<< HEAD
     "python-envs.defaultEnvManager": "ms-python.python:system",
     "python.analysis.autoImportCompletions": true
+=======
+    "python-envs.defaultEnvManager": "ms-python.python:venv"
+>>>>>>> 6e91b8a ( feat, se craron archivos consumir_mediciiones, transformacion y se modifico el main para leer los datos del backend por medio del archivo consumir_mediciones.py)
 }
