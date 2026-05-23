@@ -4,7 +4,7 @@ def transformar_datos(data_frame_limpio):
 
     df = data_frame_limpio.copy()
     df["fecha"] = pd.to_datetime(df["fecha"])
-    df["fecha_dia"] = df["fecha"].dt.date
+    df["fecha_dia"] = df["fecha"].dt.strftime("%Y-%m-%d")
     df["hora"] = df["fecha"].dt.hour
 
     #1. Transformacion 1 (Voltaje maximo, promedio y minimo por Fecha)
